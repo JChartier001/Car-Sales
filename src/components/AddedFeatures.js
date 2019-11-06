@@ -10,7 +10,7 @@ const AddedFeatures = props => {
       {props.car.features.length ? (
         <ol type="1">
           {props.car.features.map(item => (
-            <AddedFeature />
+            <AddedFeature key={item.id} feature={item} />
           ))}
         </ol>
       ) : (
@@ -23,6 +23,7 @@ const AddedFeatures = props => {
 function mapStatetoProps(state) {
   return{
     car: state.car,
+    
    
   }
 }
