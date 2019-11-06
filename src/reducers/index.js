@@ -1,4 +1,4 @@
-
+import {ADD_FEATURE, REMOVE_ADDED_FEATURE} from "../actions/index"
 
 const initialState = {
     additionalPrice: 0,
@@ -18,6 +18,18 @@ const initialState = {
   };
 
 export function reducer (state = initialState, action) {
-    switch (action.type)
-    
+    switch (action.type){
+        case ADD_FEATURE:
+            return {
+                ...state,
+                additionalPrice: state.price
+            }
+        case REMOVE_ADDED_FEATURE:
+            return {
+                ...state,
+                additionalPrice: !state.price
+            }
+        default:
+            return state
+    }
 }
