@@ -9,8 +9,12 @@ import Total from './components/Total';
 const App = () => {
   
   return (
+    <div className="App">
+      <h2 className="title">Car Sales</h2>
+      <p className="para">To calculate total cost, add the features the customer is interested in to the base model.</p>
     <div className="boxes">
       <div className="box">
+        
         <Header />
         <AddedFeatures />
       </div>
@@ -18,6 +22,7 @@ const App = () => {
         <AdditionalFeatures />
         <Total /> 
       </div>
+    </div>
     </div>
   );
 };
